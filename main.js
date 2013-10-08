@@ -73,7 +73,7 @@ var fireSpread = function(leftFire, rightFire) {
 			var newRight = rightFire.parent().next().children('a').addClass('btn-warning').removeClass('btn-default')
 				setTimeout( function() {
 				if(rightFire.hasClass('btn-warning')){
-					 newRight.addClass('btn-danger')
+					 newRight.addClass('btn-danger').text("!")
 					}
 				}, 2000);
 
@@ -89,12 +89,12 @@ var fireSpread = function(leftFire, rightFire) {
 //Button clicks
 $('.btn-default').on('click', function (){
 	if ($('#lake').hasClass('selected-power') && $(this).hasClass('btn-default')){
-		$(this).addClass('btn-info').removeClass('btn-default').text("Lake")
+		$(this).addClass('btn-info').removeClass('btn-default').text("")
 	};
 
 	if ($('#campfire').hasClass('selected-power') && !$(this).hasClass('btn-info')){
 		var starter = $(event.target)
-		starter.addClass('btn-danger').removeClass('btn-default').text("FIRE!")
+		starter.addClass('btn-danger').removeClass('btn-default').text("!")
 		fireStarter(starter)
 	};
 });

@@ -20,8 +20,10 @@ body {
 
 .btn{
 	-webkit-transition: all 0.5s cubic-bezier(0,1.63,.62,-1.16);
+	font-family: wildfire;
 }
 
 @font-face {
-	
+	font-family: wildfire;
+	src: url('wildfireFont65/fonts/wildfireFont.ttf');
 }
